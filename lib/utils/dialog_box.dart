@@ -4,6 +4,7 @@ import 'my_button.dart';
 
 class DialogBox extends StatelessWidget {
   final controller;
+  final String hintText;
   VoidCallback onSave;
   VoidCallback onCancel;
 
@@ -12,6 +13,7 @@ class DialogBox extends StatelessWidget {
     required this.controller,
     required this.onSave,
     required this.onCancel,
+    required this.hintText,
   });
 
   @override
@@ -28,7 +30,7 @@ class DialogBox extends StatelessWidget {
               controller: controller,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: 'Add a new task',
+                hintText: hintText,
               ),
             ),
             //buttons --> Save & Cancel
